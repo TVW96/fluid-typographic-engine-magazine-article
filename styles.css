@@ -1,0 +1,187 @@
+:root {
+  color-scheme: light;
+
+  /* Responsive system-wide type scale */
+  --size-step--1: clamp(0.78rem, 0.75rem + 0.14vw, 0.88rem);
+  --size-step-0: clamp(1rem, 0.94rem + 0.28vw, 1.18rem);
+  --size-step-1: clamp(1.25rem, 1.08rem + 0.72vw, 1.75rem);
+  --size-step-2: clamp(1.75rem, 1.35rem + 1.7vw, 2.9rem);
+  --size-step-3: clamp(2.75rem, 1.65rem + 4.2vw, 5.75rem);
+  --size-drop-cap: clamp(3.6rem, 3rem + 2.4vw, 5.2rem);
+
+  --font-display: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  --font-body: "Charter", "Bitstream Charter", "Georgia", serif;
+  --font-sans: "Avenir Next", "Segoe UI", sans-serif;
+
+  --color-ink: oklch(22% 0.025 260);
+  --color-muted: oklch(48% 0.025 260);
+  --color-accent: oklch(52% 0.16 29);
+  --color-paper: oklch(97.5% 0.012 85);
+  --color-rule: oklch(82% 0.025 85);
+
+  --space-1: clamp(0.5rem, 0.4rem + 0.4vw, 0.8rem);
+  --space-2: clamp(1rem, 0.8rem + 0.8vw, 1.6rem);
+  --space-3: clamp(1.5rem, 1rem + 2vw, 3rem);
+  --space-4: clamp(3rem, 2rem + 4vw, 6rem);
+  --reading-measure: 70ch;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-block-size: 100dvh;
+  background:
+    linear-gradient(90deg, color-mix(in oklch, var(--color-accent) 5%, transparent), transparent 28%),
+    var(--color-paper);
+  font-size: var(--size-step-0);
+  line-height: 1.72;
+}
+
+.magazine-article {
+  inline-size: min(calc(100% - 2 * var(--space-2)), var(--reading-measure));
+  margin-inline: auto;
+  padding-block: var(--space-4);
+}
+
+.article-header {
+  display: grid;
+  gap: var(--space-2);
+  padding-block-end: var(--space-3);
+  border-block-end: 1px solid var(--color-rule);
+}
+
+.article-category {
+  inline-size: fit-content;
+  color: var(--color-accent);
+  font-family: var(--font-sans);
+  font-size: var(--size-step--1);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-box: trim-both cap alphabetic;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+  -webkit-text-box-trim: trim-both;
+}
+
+.article-title {
+  max-inline-size: 16ch;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--size-step-3);
+  font-weight: 600;
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+  text-box: trim-both cap alphabetic;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+  -webkit-text-box-trim: trim-both;
+}
+
+.article-lead {
+  max-inline-size: 55ch;
+  margin: 0;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: var(--size-step-1);
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+.article-meta {
+  color: var(--color-muted);
+  font-family: var(--font-sans);
+  font-size: var(--size-step--1);
+  letter-spacing: 0.02em;
+}
+
+.article-body {
+  max-inline-size: var(--reading-measure);
+  margin-inline: auto;
+  padding-block-start: var(--space-3);
+}
+
+.article-body p {
+  margin-block: 0 var(--space-2);
+  hanging-punctuation: first last;
+  text-wrap: pretty;
+}
+
+.article-body h2 {
+  margin-block: var(--space-3) var(--space-1);
+  font-family: var(--font-display);
+  font-size: var(--size-step-2);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.drop-cap {
+  float: inline-start;
+  margin-inline-end: 0.1em;
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: var(--size-drop-cap);
+  font-weight: 600;
+  line-height: 0.72;
+  text-box: trim-both cap alphabetic;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+  -webkit-text-box-trim: trim-both;
+}
+
+blockquote {
+  position: relative;
+  margin: var(--space-3) 0;
+  padding: var(--space-2) var(--space-3);
+  border-inline-start: 0.3rem solid var(--color-accent);
+  background: color-mix(in oklch, var(--color-accent) 7%, transparent);
+  font-family: var(--font-display);
+  font-size: var(--size-step-1);
+  font-style: italic;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+blockquote::before {
+  position: absolute;
+  inset-block-start: -0.3em;
+  inset-inline-start: 0.12em;
+  color: color-mix(in oklch, var(--color-accent) 24%, transparent);
+  content: "“";
+  font-family: var(--font-display);
+  font-size: var(--size-step-3);
+  font-style: normal;
+  line-height: 1;
+  pointer-events: none;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--color-accent) 25%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-ink: oklch(91% 0.016 85);
+    --color-muted: oklch(72% 0.02 85);
+    --color-accent: oklch(73% 0.14 45);
+    --color-paper: oklch(18% 0.025 260);
+    --color-rule: oklch(36% 0.025 260);
+  }
+}
