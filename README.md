@@ -16,3 +16,7 @@ Pass. .article-body and its parent are capped at 70ch. On a 1920px viewport, the
 Pass. There is no declared html font size—especially no 62.5% override. The browser’s root remained its default 16px, and all text sizes derive from rem-based custom properties.
 
 ## Video Demonstration
+
+
+https://github.com/user-attachments/assets/8678ea92-da92-48aa-8c6e-fd2cad7343df
+
