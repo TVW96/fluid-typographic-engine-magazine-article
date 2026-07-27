@@ -22,8 +22,8 @@
 
   /* 28px at 375px; 48px at 1440px. */
   --font-size-title: clamp(1.75rem, calc(1.3099rem + 1.8779vw), 3rem);
-  --font-size-display: clamp(3.25rem, 1.55rem + 7.25vw, 8.75rem);
-  --font-size-h2: clamp(2.25rem, 1.65rem + 2.6vw, 4.5rem);
+  --font-size-brand: clamp(1.5rem, 1.36rem + 0.6vw, 2rem);
+  --font-size-h2: clamp(2rem, 1.62rem + 1.6vw, 2.75rem);
   --font-size-h3: clamp(1.35rem, 1.18rem + 0.65vw, 1.85rem);
   --font-size-body: clamp(1rem, 0.97rem + 0.14vw, 1.125rem);
 
@@ -249,7 +249,7 @@ ol {
 .footer-wordmark {
   width: fit-content;
   font-family: var(--font-serif);
-  font-size: var(--font-size-title);
+  font-size: var(--font-size-brand);
   line-height: 1;
   letter-spacing: -0.06em;
   text-decoration: none;
@@ -415,9 +415,9 @@ ol {
 }
 
 .hero h1 {
-  max-width: 9ch;
+  max-width: 14ch;
   margin-block-end: var(--space-6);
-  font-size: var(--font-size-display);
+  font-size: var(--font-size-title);
 }
 
 .hero-intro {
