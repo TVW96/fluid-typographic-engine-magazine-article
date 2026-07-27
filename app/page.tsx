@@ -9,7 +9,7 @@ const products = [
     maker: "Atelier Tiga",
     location: "Malang, Indonesia",
     price: "$142",
-    image: "/vase.jpg",
+    image: "vase.jpg",
     alt: "Sculptural stoneware vase displayed in a warm wooden alcove",
     badge: "Editor’s pick",
     className: "product-featured",
@@ -20,7 +20,7 @@ const products = [
     maker: "Rhamely Studio",
     location: "Lisbon, Portugal",
     price: "$189",
-    image: "/lamp.jpg",
+    image: "lamp.jpg",
     alt: "Table lamp casting a warm pool of light in a quiet bedroom",
     badge: "Small batch",
     className: "product-portrait",
@@ -31,7 +31,7 @@ const products = [
     maker: "Object Type",
     location: "Copenhagen, Denmark",
     price: "$440",
-    image: "/chair.jpg",
+    image: "chair.jpg",
     alt: "Close view of a rounded light-oak chair on a pale background",
     badge: "New arrival",
     className: "product-portrait",
@@ -42,7 +42,7 @@ const products = [
     maker: "Merrilee Schultz",
     location: "Portland, USA",
     price: "$96",
-    image: "/black-vase.jpg",
+    image: "black-vase.jpg",
     alt: "Sculptural black vessel illuminated against a black background",
     badge: "Only 4 left",
     className: "product-wide",
@@ -271,7 +271,7 @@ export default function Home() {
 
           <figure className="hero-visual">
             <img
-              src="/vase.jpg"
+              src="vase.jpg"
               alt="Stoneware vase framed by warm geometric timber shelving"
               width="1600"
               height="2400"
@@ -364,7 +364,7 @@ export default function Home() {
         <aside className="curator-note shell" id="curator-note" aria-labelledby="curator-title">
           <figure>
             <img
-              src="/lamp.jpg"
+              src="lamp.jpg"
               alt="Warm table lamp glowing in a dim, intimate room"
               width="1600"
               height="1067"
@@ -434,7 +434,7 @@ export default function Home() {
           <article className="journal-feature">
             <figure>
               <img
-                src="/chair.jpg"
+                src="chair.jpg"
                 alt="Close detail of the curved back and seat of a pale oak chair"
                 width="1600"
                 height="2000"
