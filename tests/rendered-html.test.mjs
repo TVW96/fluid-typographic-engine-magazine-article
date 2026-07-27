@@ -91,5 +91,8 @@ test("keeps accessibility, OKLCH themes, and Pages output explicit", async () =>
 
   assert.match(layout, /Common Form — Independent objects for considered homes/);
   assert.match(packageJson, /"build:pages": "vite build --config vite\.pages\.config\.ts"/);
-  assert.match(pagesHtml, /tvw96\.github\.io\/fluid-typographic-engine-magazine-article/);
+  assert.match(
+    pagesHtml,
+    /tvw96\.github\.io\/fluid-typographic-engine-magazine-article\/common-form/,
+  );
 });

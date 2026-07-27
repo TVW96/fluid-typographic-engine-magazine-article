@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   root: "github-pages",
-  base: "/fluid-typographic-engine-magazine-article/",
+  base: "/fluid-typographic-engine-magazine-article/common-form/",
   publicDir: "../public",
   plugins: [react()],
   build: {
